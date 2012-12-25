@@ -1,0 +1,1 @@
+you need to have lynx installed for this to work, latest comic num hardcoded at the moment
