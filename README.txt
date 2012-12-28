@@ -1,1 +1,1 @@
-you need to have lynx installed for this to work, latest comic num hardcoded at the moment
+You need to have wget, sed, and grep for this to work
