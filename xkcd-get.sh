@@ -9,5 +9,7 @@ for ((i=1;i<=latest;i++)); do
     link=`wget -O- http://www.xkcd.com/$i | grep http://imgs.xkcd.com/comics`
     #getting the URL
     url=`echo $link|grep -o 'src="[^"]*"'|sed -e 's/src="\([^"]*\)"/\1/'`
+    alttext=`echo $link|grep -o 'alt="[^"]*"'|sed -e 's/alt="\([^"]*\)"/\1/'`
     wget $url -O "$i.jpg"
+    echo "$i: $alttext" >> alttext.txt
 done
